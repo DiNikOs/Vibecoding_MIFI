@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box; /* Защищает от вылезания за границы из-за внутреннего padding - общее применение*/
+}
+
+body {
+  margin: 0;
+  background: #f5f3ff;
+  color: #1f1b2d;
+  font-family: Arial, sans-serif;
+}
+
+.service-form {
+  border: 2px solid #c4b5fd;
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.checkbox-group {
+  display: block; /* Каждый чекбокс железно начинается с новой строки */
+  margin-bottom: 1px; /* Отступ между строками услуг */
+  position: relative; /* Позволяет точно позиционировать квадратик */
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.checkbox-group label {
+  display: inline; /* Текст идет сразу за чекбоксом */
+  vertical-align: middle; /* Выравнивает текст по центру относительно квадратика */
+  margin-left: 24px;
+  line-height: 1.4;
+  word-wrap: break-word; /* Разрешает перенос слов на узких экранах */
+  word-break: break-all; /* Защита от слишком длинных слов без пробелов */
+}
+
+/* Стили для самого квадратика чекбокса */
+.checkbox-group input[type="checkbox"] {
+  vertical-align: middle; /* Выравнивает квадратик по центру относительно текста */
+  margin-right: 1px;
+  margin-left: 1px;
+  position: absolute; 
+  top: 3px; 
+}
+
+.submit-btn {
+  display: block; /* Переносим кнопку на новую строку */
+  margin: 20px auto 0 auto;
+  padding: 8px 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  max-width: 100%; /* Кнопка не станет шире самой формы */
+  width: auto; /* Ширина подстраивается под текст, но не более 100% */
+  white-space: normal; /* Разрешает тексту кнопки переноситься на новую строку */
+  word-wrap: break-word; /* Защищает от вылезания длинных слов */
+}
+
+.error-msg {
+  color: #cc0000;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.result-block {
+  background-color: #e9ecef;
+  padding: 15px;
+  margin-top: 20px;
+  border-left: 4px solid #28a745;
+}
+
+.json-block {
+  background-color: #272822;
+  color: #f8f8f2;
+  padding: 10px;
+  margin-top: 15px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.page {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 25px;
+  margin: 0 auto;
+  /* Ограничиваем максимальную ширину карточки на большом экране */
+  max-width: 600px;
+  width: 100%; 
+}

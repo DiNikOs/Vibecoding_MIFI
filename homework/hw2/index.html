@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>event-title</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <main class="page">
+      <!-- Заголовок и основная информация -->
+      <h1 id="event-title"></h1>
+      <p id="event-date"></p>
+      <p id="event-place"></p>
+      <p id="event-description"></p>
+      <!-- Программа -->
+      <button id="show-program">Показать программу</button>
+      <p id="program" hidden></p>
+      <!-- Блок ошибок данных -->
+      <p id="data-error" class="error-msg" hidden></p>
+
+      <!-- Форма выбора услуг -->
+      <form id="service-form" class="service-form" hidden>
+        <div class="checkbox-group">
+          <input id="guide" type="checkbox" name="withGuide" />
+          <label id="label-guide" for="guide">Гид</label>
+        </div>
+        <div class="checkbox-group">
+          <input id="catalog" type="checkbox" name="withCatalog" />
+          <label id="label-catalog" for="catalog">Каталог</label>
+        </div>
+        <div class="checkbox-group">
+          <input id="audio" type="checkbox" name="withAudio" />
+          <label id="label-audio" for="audio">Aудио</label>
+        </div>
+        <button type="submit" class="submit-btn">Рассчитать стоимость</button>
+      </form>
+      <!-- Блок ошибок выбора -->
+      <p id="choice-error" class="error-msg" hidden></p>
+      <!-- Результаты расчета -->
+      <div id="result" class="result-block" hidden></div>
+      <div id="report-json" class="json-block" hidden></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
